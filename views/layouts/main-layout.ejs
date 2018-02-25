@@ -12,11 +12,18 @@
       crossorigin="anonymous"></script>
   </head>
   <body>
+    <nav>
+      <a href="/signup">Sign-Up</a><br>
+      <a href="/login">Log-in</a>
+      <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+      </form>
+    </nav>
 
     <div class="main-container">
       <%- body -%>
     </div>
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 
