@@ -61,6 +61,27 @@ profileRouter.get('/:id/edit-review', (req, res, next) => {
   });
 });
 
+// Update Product Information to Database 
+profileRouter.post('/:id/edit-review', (req, res, next) => {
+  const reviewId = req.params.id;
+
+  // Create a New Object with All the Information From the Req Body.
+  const updateReview = {
+    name: req.body.name,
+    city: req.body.city,
+    state: req.body.state,
+    picture: req.body.picture,
+    comments: req.body.comments,
+    rating: req.body.rating
+  };
+  // Take the Params above and Update into the Database
+  Review.findByIdAndUpdate(reviewId, updateReview, (err, review) => {
+    if (err){ return next(err); }
+    // Redirect to the Dashboard if Successful
+    return res.redirect('/dashboard');
+  });
+});
+
 
 
 module.exports = profileRouter;
