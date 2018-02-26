@@ -2,3 +2,20 @@
   Hey <span style="color: red;"><%= user.username%></span>
   Welcome to the Dashboard!
 </h1>
+
+<!-- List the Reviews here -->
+<ul>
+    <% reviews.forEach((review) => { %>
+      <li>
+       <strong>Place:</strong> <%= review.name %><br>  
+       <strong>City:</strong>  <%= review.city %><br> 
+       <strong>State:</strong> <%= review.state %><br>
+       <strong>Image:</strong> <%= review.picture %><br>
+       <strong>Comments:</strong> <%= review.comments %><br>
+       <strong>Rating:</strong> <%= review.rating %><br>
+
+      </li>
+    <% }) %>
+</ul>
+
+<a href="/new">Add a new Review Log</a>

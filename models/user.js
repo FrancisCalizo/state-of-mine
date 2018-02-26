@@ -15,4 +15,5 @@ const userSchema = new Schema (
 
 const User = mongoose.model('User', userSchema);
 
+// Make Module Usabale throughtout application
 module.exports = User; 
