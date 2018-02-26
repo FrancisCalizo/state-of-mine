@@ -50,4 +50,17 @@ profileRouter.post('/dashboard', (req, res, next) => {
   });
 });
 
+// Show form to Update Review
+profileRouter.get('/:id/edit-review', (req, res, next) => {
+  const reviewId = req.params.id;
+  // Search DB by Review ID
+  Review.findById(reviewId, (err, review) => {
+      if (err) { return next(err); }
+      // Render Review Details to Edit
+      res.render('profile/edit-review', { review: review });
+  });
+});
+
+
+
 module.exports = profileRouter;
