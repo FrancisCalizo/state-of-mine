@@ -37,7 +37,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Check to See if User is Signed In // 
-// CLARIFY WHAT THIS CODE DOES !!! MAY DELETE THIS!
 app.use( (req, res, next) => {
   if (typeof(req.user) !== "undefined"){
     res.locals.userSignedIn = true;
@@ -90,12 +89,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Define the Routes for Middleware
-const index = require('./routes/index');
-const authRoutes = require('./routes/auth-routes.js');
+const index         = require('./routes/index.js');
+const authRoutes    = require('./routes/auth-routes.js');
+const profileRoutes = require('./routes/profile-routes.js')
 
 // Middleware Routes
 app.use('/', index);
 app.use('/', authRoutes);
+app.use('/', profileRoutes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

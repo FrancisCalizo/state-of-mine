@@ -62,7 +62,7 @@ router.get('/login', ensureLoggedOut(), (req, res) => {
 
 // Post Request to Login, after Passport Set Up
 router.post('/login', ensureLoggedOut(), passport.authenticate('local', {
-  successRedirect : '/',
+  successRedirect : '/dashboard',
   failureRedirect : '/login',
   failureFlash: true,
   passReqToCallback: true
