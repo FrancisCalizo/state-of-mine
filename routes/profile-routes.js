@@ -82,6 +82,14 @@ profileRouter.post('/:id/edit-review', (req, res, next) => {
   });
 });
 
-
+// Delete Product from Database
+profileRouter.post('/:id/delete', (req, res, next) => {
+  const reviewId = req.params.id;
+  // Use Find to Locate & Remove 
+  Review.findByIdAndRemove(reviewId, (err, product) => {
+    if (err){ return next(err); }
+    return res.redirect('/dashboard');
+  });
+});
 
 module.exports = profileRouter;
