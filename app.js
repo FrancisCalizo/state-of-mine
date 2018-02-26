@@ -10,12 +10,13 @@ const bcrypt          = require('bcrypt');                  // Password Encrypti
 const expressLayouts  = require('express-ejs-layouts');     // Templates (Partials)
 const passport        = require('passport');                // Authentication Middleware
 const session         = require('express-session');         // Stores User Sessions
+const flash           = require('connect-flash');           // Stores Messages in Session
 const LocalStrategy   = require('passport-local').Strategy  // Local Strategy for PP
 const MongoStore      = require('connect-mongo')(session);  // Store Sessions in DB
 
 const User            = require('./models/user');
 
-// Connect Mongoose to the 'stateofmine' Database
+// THIS HAS TO BE CHANGED WHEN DEPLOYING TO HEROKU
 mongoose.connect('mongodb://localhost/stateofmine');
 
 const app = express();
@@ -48,73 +49,43 @@ app.use( (req, res, next) => {
 
 // Initialize a Session and Passport
 app.use(session({
-  secret: 'State of Mind',
+  secret: 'Passport Local Strategy - State of Mine',
   resave: false,
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })
 }));
 
-// COMMENT ON FUNCTIONALITY 
+// PassPort Configuration 
 passport.serializeUser((user, cb) => {
   cb(null, user.id);
 });
-// COMMENT ON FUNCTIONALITY 
+// PassPort Configuration 
 passport.deserializeUser((id, cb) => {
-  User.findById(id, (err, user) => {
+  User.findOne({ "_id": id }, (err, user) => {
     if (err) { return cb(err); }
     cb(null, user);
   });
 });
 
-// Passport Strategy for Signing Up
-passport.use('local-signup', new LocalStrategy(
-  { passReqToCallback: true },
-  (req, username, password, next) => {
-    // To avoid race conditions
-    process.nextTick(() => {
-        User.findOne({
-            'username': username
-        }, (err, user) => {
-            if (err){ return next(err); }
-
-            if (user) {
-                return next(null, false);
-            } else {
-                // Destructure the body // IS EMAIL & DESCRIPTION NEEDED?
-                const { username, password } = req.body;
-                const hashPass = bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-                const newUser = new User({
-                  username,
-                  password: hashPass
-                });
-                // COMMENT ON FUNCTIONALITY
-                newUser.save((err) => {
-                    if (err){ next(err); }
-                    return next(null, newUser);
-                });
-            }
-        });
+// Passport Stategy for Logging In
+passport.use(new LocalStrategy({ passReqToCallback: true
+  }, (req, username, password, next) => {
+    User.findOne({ username }, (err, user) => {
+      if (err) {
+        return next(err);
+      }
+      if (!user) {
+        return next(null, false, { message: "Incorrect username" });
+      }
+      if (!bcrypt.compareSync(password, user.password)) {
+        return next(null, false, { message: "Incorrect password" });
+      }
+      return next(null, user);
     });
 }));
 
-// Passport Stategy for Logging In
-passport.use('local-login', new LocalStrategy((username, password, next) => {
-  User.findOne({ username }, (err, user) => {
-    if (err) {
-      return next(err);
-    }
-    if (!user) {
-      return next(null, false, { message: "Incorrect username" });
-    }
-    if (!bcrypt.compareSync(password, user.password)) {
-      return next(null, false, { message: "Incorrect password" });
-    }
-
-    return next(null, user);
-  });
-}));
-
-
+// Initializing Passport, Session Flash
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 

@@ -1,3 +1,5 @@
+<h1>This is the Signup Page</h1>
+
 <form action="/signup" method="POST">
   <label for="username">Username</label><br>
   <input type="text" name="username" placeholder="Donald"><br><br>
@@ -7,7 +9,12 @@
 
   <button>Create Account</button>
 
-  <% if (typeof(errorMessage) != "undefined") { %>
-    <div class="error-message"><%= errorMessage %></div>
+  <p>
+    Already have an account?
+    <a href="/login">Login</a>
+  </p>
+
+  <% if (typeof(message) != "undefined") { %>
+    <div><%= message %></div>
   <% } %>
 </form>
