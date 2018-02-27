@@ -1,11 +1,17 @@
 const express          = require('express');
 const passport         = require('passport');
+// Require for File Upload
+const multer           = require('multer');
 const profileRouter    = express.Router();
+
 // Middleware to Ensure That User is Logged In or Logged Out
 const { ensureLoggedIn, ensureLoggedOut } = require("connect-ensure-login");
 // Require Our Models
 const User   = require("../models/user");
 const Review = require("../models/review");
+// Points File Upload into Destination Folder
+const upload = multer({ dest: './public/uploads/' });
+
 
 // Dashboard Page Only Available if User is Logged In.
 // Redirect to Login Page if User is Logged Out
@@ -26,13 +32,15 @@ profileRouter.get('/new', ensureLoggedIn(), (req, res, next) => {
 });
 
 // Route Handler for Creating new Review 
-profileRouter.post('/dashboard', (req, res, next) => {
+profileRouter.post('/dashboard', upload.single('file-to-upload'), (req, res, next) => {
   // Take the params and translate them into a new object
   const reviewInfo = {
       name        : req.body.name,
       city        : req.body.city,
       state       : req.body.state,
-      picture     : req.body.picture,
+      // req.file path from Multer
+      picturePath : `/uploads/${req.file.filename}`,
+      originalName: req.file.originalName,
       comments    : req.body.comments,
       rating      : req.body.rating
   }

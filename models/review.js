@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
+var multer = require('multer');
 
 const reviewSchema = new Schema ({
   name        : String,
   city        : String,
   state       : String,
-  picture     : String, // Look up Multer 
+  picturePath : String,
+  originalName: String,
   comments    : String,
   rating      : Number
 });

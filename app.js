@@ -4,6 +4,7 @@ const favicon         = require('serve-favicon');
 const logger          = require('morgan');
 const cookieParser    = require('cookie-parser');
 const bodyParser      = require('body-parser');
+
 // Added Requirements after Express Generator
 const mongoose        = require('mongoose');                // CRUD MongoDB in JS File
 const bcrypt          = require('bcrypt');                  // Password Encryption
@@ -13,7 +14,6 @@ const session         = require('express-session');         // Stores User Sessi
 const flash           = require('connect-flash');           // Stores Messages in Session
 const LocalStrategy   = require('passport-local').Strategy  // Local Strategy for PP
 const MongoStore      = require('connect-mongo')(session);  // Store Sessions in DB
-
 const User            = require('./models/user');
 
 // THIS HAS TO BE CHANGED WHEN DEPLOYING TO HEROKU
