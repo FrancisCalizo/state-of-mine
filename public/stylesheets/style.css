@@ -1,12 +1,55 @@
+/* Fonts:
+font-family: 'Lobster', cursive;
+font-family: 'Raleway', sans-serif; */
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   color: #00B7FF;
 }
 
+/* Main Index Page Styling Begins Here */
+.header{
+  background-image: url("../images/blue-twilight.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 550px;
+  width: 100%;
+}
+
+@media(max-width:768px) {
+  .header{
+    height: 1100px;
+  }
+}
+
+.header-text{
+  margin-top: 50px;
+}
+.header-sec h1{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  color: white;
+  font-size: 4em;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  height: 500px;
+}
+
+/* Signup Styling begins here */
+
+/* Dashboard styling Begins Here */
 #chartdiv {
   /* background-image: url("https://cdn.wallpapersafari.com/73/15/yGFbTu.jpg");
   background-repeat: no-repeat;
@@ -14,3 +57,4 @@ a {
   height: 500px;
   width: 100%;
 }
+
