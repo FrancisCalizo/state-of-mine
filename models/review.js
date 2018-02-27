@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
-var multer = require('multer');
+const multer     = require('multer');
 
 const reviewSchema = new Schema ({
   name        : String,

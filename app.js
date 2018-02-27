@@ -14,6 +14,7 @@ const session         = require('express-session');         // Stores User Sessi
 const flash           = require('connect-flash');           // Stores Messages in Session
 const LocalStrategy   = require('passport-local').Strategy  // Local Strategy for PP
 const MongoStore      = require('connect-mongo')(session);  // Store Sessions in DB
+
 const User            = require('./models/user');
 
 // THIS HAS TO BE CHANGED WHEN DEPLOYING TO HEROKU

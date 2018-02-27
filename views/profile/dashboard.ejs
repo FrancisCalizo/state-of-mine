@@ -3,8 +3,12 @@
   Welcome to the Dashboard!
 </h1>
 
+<!-- Map Chart goes Here -->
+<div id="chartdiv"></div>
+
 <!-- List the Reviews here -->
-<ul>
+<div>
+  <ul>
     <% reviews.forEach((review) => { %>
       <li>
        <strong>Place:</strong> <%= review.name %><br>  
@@ -24,3 +28,6 @@
 </ul>
 
 <a href="/new">Add a new Review Log</a>
+</div>
+
+
