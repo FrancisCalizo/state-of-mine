@@ -37,16 +37,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Check to See if User is Signed In // 
-app.use( (req, res, next) => {
-  if (typeof(req.user) !== "undefined"){
-    res.locals.userSignedIn = true;
-  } else {
-    res.locals.userSignedIn = false;
-  }
-  next();
-});
-
 // Initialize a Session and Passport
 app.use(session({
   secret: 'Passport Local Strategy - State of Mine',
@@ -88,6 +78,14 @@ passport.use(new LocalStrategy({ passReqToCallback: true
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Check to See if User is Signed In After Passport // 
+app.use ((req, res, next)=>{
+  if(req.user){
+    res.locals.user = req.user; // !!!!!!
+  }
+  next();
+});
 
 // Define the Routes for Middleware
 const index         = require('./routes/index.js');

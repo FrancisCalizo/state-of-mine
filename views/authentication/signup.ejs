@@ -1,23 +1,24 @@
-<div class="container signup">
-  <h1>This is the Signup Page</h1>
-
-  <form action="/signup" method="POST">
-    <label for="username">Username</label><br>
-    <input type="text" name="username" placeholder="Donald"><br><br>
-  
-    <label for="password">Password</label><br>
-    <input type="password" name="password" placeholder="Glover"><br><br>
-  
-    <button>Create Account</button>
-  
-    <p>
-      Already have an account?
-      <a href="/login">Login</a>
-    </p>
-  
-    <% if (typeof(message) != "undefined") { %>
-      <div><%= message %></div>
-    <% } %>
-  </form>
-</div>
+<body class="signup-page">
+  <div class="container signup">
+    
+    <form action="/signup" method="POST">
+      <label for="username">Username</label><br>
+      <input type="text" name="username" placeholder="Username"><br><br>
+    
+      <label for="password">Password</label><br>
+      <input type="password" name="password" placeholder="Password"><br><br>
+    
+      <button>Create Account</button>
+    
+      <p>
+        Already have an account?
+        <a href="/login">Login</a>
+      </p>
+    
+      <% if (typeof(message) != "undefined") { %>
+        <div><%= message %></div>
+      <% } %>
+    </form>
+  </div>
+</body>
 
