@@ -1,44 +1,35 @@
 <body class="new-page">
   <div class="new-form">
-    <h1>Add Your Review Details</h1>
-
-    <form action="/dashboard" enctype="multipart/form-data" method="POST">
-      <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
-      </div>
-
-      <div>
-        <label for="city">City</label>
-        <input type="text" name="city" id="city">
-      </div>
-
-      <div>
-        <label for="state">State</label>
-        <input type="text" name="state" id="state">
-      </div>
-
-      <div>
-        <label for="picture">Picture</label>
-        <input type="text" name="picture" id="picture">
-      </div>
-
-      <div>
-        <label for="comments">Comments</label>
-        <textarea type="text" name="comments" id="comments"></textarea>
-      </div>
-
-      <div>
-        <label for="rating">Rating</label>
-        <input type="number" name="rating" id="rating">
-      </div>
-
-      <input type="file" name="file-to-upload">
-      
-      <div>
-        <button type="submit">Post Review</button>
-      </div>
-    </form>
+    <div class="form-text">
+      <h1>Add Your Review Details</h1>
+      <form action="/dashboard" enctype="multipart/form-data" method="POST">
+        <div>
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name">
+        </div>
+        <div>
+          <label for="city">City</label><br>
+          <input type="text" name="city" id="city">
+        </div>
+        <div>
+          <label for="state">State</label><br>
+          <input type="text" name="state" id="state">
+        </div>
+        <div>
+          <label for="comments">Comments</label><br>
+          <textarea rows="10"  type="text" name="comments" id="comments"></textarea>
+        </div>
+        <div>
+          <label for="rating">Rating</label><br>
+          <input type="number" name="rating" id="rating">
+        </div><br>
+        <label for="file-to-upload">Image Upload <strong>(Required)</strong></label>
+        <input type="file" name="file-to-upload">
+        <div><br>
+          <button type="submit">Post Review</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 
