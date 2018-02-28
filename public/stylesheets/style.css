@@ -107,6 +107,26 @@ a {
   height: 400px;
 }
 
+/* About Styling Starts Here */
+
+
+/* Contact Styling Starts Here */
+.contact{
+  background-image: url("../images/sunset.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 650px;
+  width: 100%;
+}
+
+
 /* Dashboard styling Begins Here */
 #chartdiv {
   /* background-image: url("https://cdn.wallpapersafari.com/73/15/yGFbTu.jpg");
