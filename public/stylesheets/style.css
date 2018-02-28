@@ -1,6 +1,8 @@
 /* Fonts:
 font-family: 'Lobster', cursive;
-font-family: 'Raleway', sans-serif; */
+font-family: 'Raleway', sans-serif; 
+font-family: 'Passion One', cursive; */
+
 
 body {
   padding: 50px;
@@ -79,11 +81,69 @@ a {
 
 .header-sec-right h1{
   color: #1EA4BD;
-  text-shadow:
-  -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-/* Signup Styling begins here */
+/* About Styling Starts Here */
+.about{
+  text-align: center;
+  height: 500px;
+}
+
+.about-text {
+  padding: 50px 0;
+}
+
+.about h2{
+  font-size: 6vw;
+  color: #FDC86B;
+  font-family: 'Lobster', cursive;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  
+}
+
+hr {
+	height: 10px;
+	border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  width: 75vw;
+}
+
+.about h4{
+  font-family: 'Lobster', cursive;
+  font-size: 2vw;
+  padding: 15px 0;
+  font-weight: bold;
+}
+
+.about p{
+  font-size: 1.5vw;
+}
+
+/* About Styling Ends Here */
+
+/* Contact Styling Starts Here */
+.contact{
+  background-image: url("../images/sunset.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 650px;
+  width: 100%;
+}
+
+/* Contact Styling Ends Here */
+
+/* Signup & Login Page Styling begins here */
+.signup-page input, .login-page input{
+  font-size: 1.5em;
+}
 
 .signup-page, .login-page{
   background-image: url("../images/purple-twilight.jpg");
@@ -107,32 +167,30 @@ a {
   height: 400px;
 }
 
-/* About Styling Starts Here */
-
-
-/* Contact Styling Starts Here */
-.contact{
-  background-image: url("../images/sunset.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  height: 650px;
-  width: 100%;
-}
-
 
 /* Dashboard styling Begins Here */
+
 #chartdiv {
-  /* background-image: url("https://cdn.wallpapersafari.com/73/15/yGFbTu.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
-  height: 500px;
+  height: 400px;
   width: 100%;
+  /* border: 1px solid black; */
 }
 
+.welcome {
+  background-image: url("../images/blue.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  font-family: 'Passion One', cursive;
+  text-align: center;
+  background-color: #C2F6F7;
+}
+
+.welcome span{
+  text-transform: capitalize;
+}
+
+.col-lg-4 ul{
+  list-style-type: none;
+}
