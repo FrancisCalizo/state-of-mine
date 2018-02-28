@@ -66,6 +66,12 @@ a {
   font-size: 1.5em;
 }
 
+.index-map{
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
 .header-sec-right{
   margin-top: 60px;
   padding-left: 2%;
@@ -88,6 +94,12 @@ a {
 .about{
   text-align: center;
   height: 500px;
+}
+
+@media(max-width:768px) {
+  .about{
+    height: 600px;
+  }
 }
 
 .about-text {
@@ -117,7 +129,7 @@ hr {
 }
 
 .about p{
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 /* About Styling Ends Here */
@@ -169,22 +181,53 @@ hr {
 
 
 /* Dashboard styling Begins Here */
+.dashboard-body{
+  background-image: url("../images/mountains.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
 
 #chartdiv {
   height: 400px;
   width: 100%;
-  /* border: 1px solid black; */
 }
 
 .welcome {
-  background-image: url("../images/blue.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
   margin-top: 75px;
   margin-bottom: 50px;
   font-family: 'Passion One', cursive;
   text-align: center;
-  background-color: #C2F6F7;
+}
+
+.welcome h1{
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.single-review{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.single-review-text{
+  padding: 20px 20px 30px 20px;
+}
+
+.reviews-row h1{
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin-top: 20px;
 }
 
 .welcome span{
@@ -193,4 +236,49 @@ hr {
 
 .col-lg-4 ul{
   list-style-type: none;
+}
+
+.single-review{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.single-review-text form{
+  display: inline-block;
+}
+
+.single-review-text button{
+  margin-top: 20px;
+}
+
+.add-review{
+  font-size: 2em;
+  border-radius: 30px;
+  color: white;
+  background-color: #32d33a;
+  padding: 10px 15px;
+}
+
+.btn-div{
+  text-align: center;
+  margin: 50px auto 100px;
+}
+
+/* Add & Edit Reviews Styling goes Here */
+.new-page, .edit-page{
+  background-image: url('../images/blue-mountains.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.new-form{
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 500px;
 }

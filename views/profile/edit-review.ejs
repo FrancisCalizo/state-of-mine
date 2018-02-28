@@ -1,21 +1,25 @@
-<form action="/<%= review._id %>/edit-review" method="POST">
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" value="<%= review.name %>"><br>
+<body class="edit-page">
+  <div class="edit-form">
+    <form action="/<%= review._id %>/edit-review" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" value="<%= review.name %>"><br>
 
-  <label for="city">City</label>
-  <input type="text" name="city" id="city" value="<%= review.city %>"><br>
+      <label for="city">City</label>
+      <input type="text" name="city" id="city" value="<%= review.city %>"><br>
 
-  <label for="state">State</label>
-  <input type="text" name="state" id="state" value="<%= review.state %>"><br>
+      <label for="state">State</label>
+      <input type="text" name="state" id="state" value="<%= review.state %>"><br>
 
-  <label for="picture">Picture</label>
-  <input type="text" name="picture" id="picture" value="<%= review.picture %>"><br>
+      <label for="picture">Picture</label>
+      <input type="text" name="picture" id="picture" value="<%= review.picture %>"><br>
 
-  <label for="comments">Comments</label>
-  <input type="text" name="comments" id="comments" value="<%= review.comments %>"><br>
+      <label for="comments">Comments</label>
+      <input type="text" name="comments" id="comments" value="<%= review.comments %>"><br>
 
-  <label for="rating">Rating</label>
-  <input type="number" name="rating" id="rating" value="<%= review.rating %>"><br>
+      <label for="rating">Rating</label>
+      <input type="number" name="rating" id="rating" value="<%= review.rating %>"><br>
 
-  <button type="submit">Update Product</button>
-</form>
+      <button type="submit">Update Product</button>
+    </form>
+  </div>
+</body>

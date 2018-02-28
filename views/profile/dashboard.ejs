@@ -20,37 +20,49 @@
       </div>
     </div>  
 
-<div class="container welcome">
+  <div class="container welcome">
     <h1>
       Welcome <span><em><%= user.username%></em></span>! Got any states in mind?
     </h1>
-  <!-- Map Chart goes Here -->
- <div id="chartdiv" class="wow fadeIn"></div>
-</div>
+    <!-- Map Chart goes Here -->
+    <div id="chartdiv" class="wow fadeIn"></div>
+  </div>
+  <hr>
   <!-- List the Reviews here -->
   <div class="container">
-    <div class="row">
-    <% reviews.forEach((review) => { %>
-      <div class="col-lg-4 wow fadeIn" data-wow-delay="0.4s"">
-        <ul>
-          <li>
-            <strong>Place:</strong> <%= review.name %><br>  
-            <strong>City:</strong>  <%= review.city %><br> 
-            <strong>State:</strong> <%= review.state %><br>
-            <!-- <strong>Image:</strong> <img src="<%= review.picturePath %>" style="width:200px"><br> -->
-            <strong>Comments:</strong> <%= review.comments %><br>
-            <strong>Rating:</strong> <%= review.rating %><br>
-    
-            <a href="/<%= review._id %>/edit-review">Edit Review</a>
-            <form action="/<%= review._id %>/delete" method="POST">
-              <button type="submit">Delete Review</button>
-            </form>
-          </li>
-        </ul>
-      </div>
-    <% }) %>
+    <div class="row reviews-row">
+      <h1>My Reviews</h1>
+      <% reviews.forEach((review) => { %>
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.4s">
+          <ul>
+            <li>
+              <div class="single-review">
+                <div class="single-review-text">
+                  <strong>Place:</strong> <%= review.name %><br>  
+                  <strong>City:</strong>  <%= review.city %><br> 
+                  <strong>State:</strong> <%= review.state %><br>
+                  <!-- <strong>Image:</strong> <img src="<%= review.picturePath %>" style="width:200px"><br> -->
+                  <strong>Comments:</strong> <%= review.comments %><br>
+                  <strong>Rating:</strong> <%= review.rating %><br>
+
+                  <form action="/<%= review._id %>/edit-review" method="GET">
+                    <button type="submit">Edit Review</button>
+                  </form>
+
+                  <form action="/<%= review._id %>/delete" method="POST">
+                    <button type="submit">Delete Review</button>
+                  </form>
+
+                </div>                
+              </div>
+            </li>
+          </ul>
+        </div>
+      <% }) %>
     </div>
   </div>
-  <a href="/new">Add a new Review Log</a>
+  <div class="btn-div">
+    <a href="/new" class="add-review">Add New Review</a>
+  </div>
 </body>
 
