@@ -85,8 +85,8 @@ a {
 
 /* Signup Styling begins here */
 
-.signup-page{
-  background-image: url("../images/bg1.jpg");
+.signup-page, .login-page{
+  background-image: url("../images/purple-twilight.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -97,6 +97,14 @@ a {
   -o-background-size: cover;
   height: 100%;
   width: 100%;
+}
+
+.signup, .login{
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 350px;
+  margin-top: 120px;
+  height: 400px;
 }
 
 /* Dashboard styling Begins Here */

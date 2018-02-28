@@ -52,11 +52,24 @@
       
           <% if (typeof(message) != "undefined") { %>
             <div><%= message %></div>
-  
           <% } %>
       </form>
       </div>
-    <%}%>
+    <% } %>
+
+    <% if(typeof user !== "undefined"){ %>
+      <div class="col-lg-4 col-md-offset-1 col-md-4 header-sec header-sec-right">
+        <h1>Welcome!</h1>
+          <a href="/dashboard">Dashboard</a>
+          <form action="/logout" method="POST">
+            <button type="submit">Logout</button>
+          </form>
+      </div>
+    <% } %>
+    
+
+     
+
     </div>
   </div>
 </header>
