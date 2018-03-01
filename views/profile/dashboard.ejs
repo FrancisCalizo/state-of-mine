@@ -13,7 +13,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <form action="/logout" method="POST">
-              <button type="submit">Logout</button>
+              <button class="dash-logout btn-danger'" type="submit">Logout</button>
             </form>
           </ul>
         </div>
@@ -22,7 +22,7 @@
 
   <div class="container welcome">
     <h1>
-      Welcome <span><em><%= user.username%></em></span>! Got any states in mind?
+      Welcome <span class="welcome-user"><em><%= user.username%></em></span> ! Got any states in mind?
     </h1>
     <!-- Map Chart goes Here -->
     <div id="chartdiv" class="wow fadeIn"></div>
@@ -46,10 +46,10 @@
                   <strong>Rating:</strong> <%= review.rating %><br>
                   <div class="review-btns">
                     <form action="/<%= review._id %>/edit-review" method="GET">
-                      <button type="submit">Edit Review</button>
+                      <button class="btn-primary" type="submit">Edit Review</button>
                     </form>
                     <form action="/<%= review._id %>/delete" method="POST">
-                      <button type="submit">Delete Review</button>
+                      <button class="btn-danger" type="submit">Delete Review</button>
                     </form>
                   </div>
                 </div>                

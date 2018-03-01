@@ -3,7 +3,6 @@ font-family: 'Lobster', cursive;
 font-family: 'Raleway', sans-serif; 
 font-family: 'Passion One', cursive; */
 
-
 body {
   padding: 50px;
   font-family: 'Raleway', sans-serif;
@@ -16,6 +15,19 @@ a {
 }
 
 /* Main Index Page Styling Begins Here */
+.navbar{
+  padding-left: 100px;
+  font-size: 1.5em;
+}
+
+.navbar-right{
+  padding-right: 100px;
+}
+
+.navbar-brand{
+  font-size: 1.2em;
+}
+
 .header{
   background-image: url("../images/blue-twilight.png");
   background-attachment: fixed;
@@ -125,9 +137,9 @@ a {
   height: 500px;
 }
 
-@media(max-width:768px) {
+@media(max-width:992px) {
   .about{
-    height: 600px;
+    height: 650px;
   }
 }
 
@@ -184,8 +196,21 @@ hr {
   width: 75%;
   border-radius: 20px;
   margin: 100px auto;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+}
+
+@media(max-width:992px) {
+  .contact-text form{
+    width: 80%;
+  }
+
+  .media-fix{
+    margin-left: 15%;
+  }
+}
+
+.media-fix .btn{
+  margin-bottom: 30px;
 }
 
 .contact-text h2, .contact-text p, .contact-text label{
@@ -247,6 +272,10 @@ hr {
   width: 40px;
 }
 
+.login-form label, .signup-form label{
+  color: white;
+}
+
 .crt-acct-btn{
   font-size: 1.5em;
   width: 245px;
@@ -273,6 +302,14 @@ hr {
   -o-background-size: cover;
 }
 
+.dash-logout{
+  background-color:red;
+  color: white;
+  border-radius: 15px;
+  font-size: 1.2em;
+  margin-top: 6px;
+}
+
 #chartdiv {
   height: 400px;
   width: 100%;
@@ -285,6 +322,12 @@ hr {
   margin-bottom: 50px;
   font-family: 'Passion One', cursive;
   text-align: center;
+}
+
+.welcome-user{
+  color: gold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 1.2em;
 }
 
 .welcome h1{
@@ -305,7 +348,7 @@ hr {
 .reviews-row h1{
   font-family: 'Lobster', cursive;
   text-align: center;
-  font-size: 5rem;
+  font-size: 6rem;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   margin-top: 20px;
@@ -331,6 +374,10 @@ hr {
 
 .single-review-text button{
   margin-top: 20px;
+}
+
+.single-review-text{
+  font-size:1.2em;
 }
 
 .add-review{
