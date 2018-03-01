@@ -82,12 +82,41 @@ a {
 
 .header-sec-right input{
   font-size: 1.5em;
-  width: 80%;
+  width: 90%;
 }
 
 .header-sec-right h1{
   color: #1EA4BD;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.header-sec-right h3{
+  text-align: center;
+  color: #000;
+  font-family: 'Lobster', cursive;
+  text-shadow: -1px -1px 0 #1EA4BD, 1px -1px 0 #1EA4BD, -1px 1px 0 #1EA4BD, 1px 1px 0 #1EA4BD;
+}
+
+.header-sec-right .btn-info, .header-sec-right .btn-danger, .header-sec-right .btn-success{
+  font-size: 2em;
+  width: 250px;
+  margin: 20px auto;
+  border-radius: 30px;
+}
+
+.header-sec-right .btn-success{
+  font-size: 1.5em;
+  width: 250px;
+  margin: 10px auto;
+  border-radius: 30px;
+}
+
+.header-sec-right p{
+  font-size: 1.2.em;
+}
+
+.index-btns{
+  text-align: center;
 }
 
 /* About Styling Starts Here */
@@ -108,7 +137,7 @@ a {
 
 .about h2{
   font-size: 6vw;
-  color: #FDC86B;
+  color: #1EA4BD;
   font-family: 'Lobster', cursive;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   
@@ -172,13 +201,51 @@ hr {
 }
 
 .signup, .login{
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
   width: 350px;
-  margin-top: 120px;
+  margin-top: 140px;
   height: 400px;
 }
 
+.signup h1, .login h1{
+  font-size: 3em;
+  font-family: 'lobster', cursive;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.signup-page, .login-page{
+  text-align: center;
+}
+
+.signup-page input[type=text], .signup-page input[type=password],
+.login-page input[type=text], .login-page input[type=password],
+.header-sec-right input[type=text], .header-sec-right input[type=password]{
+  border-radius: 30px;
+  padding-left: 10px;
+}
+
+
+.signup-page p, .login-page p{
+  color: white;
+  font-size: 1.2em;
+}
+
+.signup-page a, .login-page a{
+  width: 40px;
+}
+
+.crt-acct-btn{
+  font-size: 1.5em;
+  width: 245px;
+  margin: 10px auto;
+  border-radius: 30px;
+}
+
+.error-msg{
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
 /* Dashboard styling Begins Here */
 .dashboard-body{
@@ -265,6 +332,15 @@ hr {
   margin: 50px auto 100px;
 }
 
+.review-btns{
+  text-align: center;
+}
+
+.review-btns button{
+  border-radius: 20px;
+  font-weight: bold;
+}
+
 /* Add & Edit Reviews Styling goes Here */
 .new-page, .edit-page{
   background-image: url('../images/blue-mountains.jpg');
@@ -283,6 +359,7 @@ hr {
   width: 350px;
   margin: 0 auto;
   border-radius: 25px;
+  margin-top: 30px;
 }
 
 .new-form h1, .edit-form h1{
@@ -298,4 +375,5 @@ hr {
 .form-text input, textarea{
   width: 90%;
 }
+
 

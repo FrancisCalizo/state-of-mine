@@ -42,13 +42,14 @@
       
           <label for="password">Password</label><br>
           <input type="password" name="password" placeholder="Password"><br><br>
-      
-          <button type="submit">Login</button>
-      
-          <p>
-            Don't have an account?
-            <a href="/signup">Signup!</a>
-          </p>
+
+          <div class="index-btns">
+            <button class="btn-success" type="submit">Login</button>
+            <p>
+              Don't have an account?
+              <a href="/signup">Signup!</a>
+            </p>
+          </div>
       
           <% if (typeof(message) != "undefined") { %>
             <div><%= message %></div>
@@ -60,10 +61,15 @@
     <% if(typeof user !== "undefined"){ %>
       <div class="col-lg-4 col-md-offset-1 col-md-4 header-sec header-sec-right wow bounceInRight">
         <h1>Welcome!</h1>
-          <a href="/dashboard">Dashboard</a>
-          <form action="/logout" method="POST">
-            <button type="submit">Logout</button>
+        <h3>You are currently logged in.</h3>
+        <div class="index-btns">
+          <form action="/dashboard" method="GET">
+            <button class="btn-info" type="submit">Dashboard</button>
           </form>
+          <form action="/logout" method="POST">
+            <button class="btn-danger" type="submit">Logout</button>
+          </form>
+        </div>
       </div>
     <% } %>
     </div>

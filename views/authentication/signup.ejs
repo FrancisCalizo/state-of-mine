@@ -1,24 +1,29 @@
 <body class="signup-page">
   <div class="container signup wow bounceIn">
+    <h1>Sign Up</h1>
 
-    <form action="/signup" method="POST">
-      <label for="username">Username</label><br>
-      <input type="text" name="username" placeholder="Username" class="username"><br><br>
-    
-      <label for="password">Password</label><br>
-      <input type="password" name="password" placeholder="Password"><br><br>
-    
-      <button>Create Account</button>
-    
-      <p>
-        Already have an account?
-        <a href="/login">Login</a>
-      </p>
-    
-      <% if (typeof(message) != "undefined") { %>
-        <div><%= message %></div>
-      <% } %>
-    </form>
+    <div class="signup-form">
+
+      <form action="/signup" method="POST">
+        <label for="username">Username</label><br>
+        <input type="text" name="username" placeholder="Username" class="username"><br><br>
+      
+        <label for="password">Password</label><br>
+        <input type="password" name="password" placeholder="Password"><br><br>
+      
+        <button class="btn-success crt-acct-btn" type="submit">Create Account</button>
+      
+        <p>
+          Already have an account?
+          <a href="/login">Login</a><br>
+      </p>        
+        <% if (typeof(message) != "undefined") { %>
+          <div class="error-msg"><%= message %></div>
+        <% } %>
+
+      </form>
+    </div>   
+   <a href="/">Back to Home Page</a>   
   </div>
 </body>
 

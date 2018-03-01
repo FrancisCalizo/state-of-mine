@@ -44,15 +44,14 @@
                   <!-- <strong>Image:</strong> <img src="<%= review.picturePath %>" style="width:200px"><br> -->
                   <strong>Comments:</strong> <%= review.comments %><br>
                   <strong>Rating:</strong> <%= review.rating %><br>
-
-                  <form action="/<%= review._id %>/edit-review" method="GET">
-                    <button type="submit">Edit Review</button>
-                  </form>
-
-                  <form action="/<%= review._id %>/delete" method="POST">
-                    <button type="submit">Delete Review</button>
-                  </form>
-
+                  <div class="review-btns">
+                    <form action="/<%= review._id %>/edit-review" method="GET">
+                      <button type="submit">Edit Review</button>
+                    </form>
+                    <form action="/<%= review._id %>/delete" method="POST">
+                      <button type="submit">Delete Review</button>
+                    </form>
+                  </div>
                 </div>                
               </div>
             </li>
