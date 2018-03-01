@@ -8,7 +8,7 @@ var map = AmCharts.makeChart( "chartdiv", {
   //"backgroundAlpha": 1,
   "dataProvider": {
     "map": "usaLow",
-    "getAreasFromMap": true
+    "getAreasFromMap": true,
   },
   "areasSettings": {
     "autoZoom": false,
@@ -46,4 +46,11 @@ var map = AmCharts.makeChart( "chartdiv", {
     "enabled": true
   }
 } );
+
+
+
+//selectedColorReal
+//map.validateNow();
+
+
 
