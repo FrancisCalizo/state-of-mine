@@ -14,12 +14,13 @@ const session         = require('express-session');         // Stores User Sessi
 const flash           = require('connect-flash');           // Stores Messages in Session
 const LocalStrategy   = require('passport-local').Strategy  // Local Strategy for PP
 const MongoStore      = require('connect-mongo')(session);  // Store Sessions in DB
+require("dotenv").config();
 
 const User            = require('./models/user');
 
 // THIS HAS TO BE CHANGED WHEN DEPLOYING TO HEROKU
-mongoose.connect('mongodb://localhost/stateofmine');
-
+// mongoose.connect('mongodb://localhost/stateofmine');
+mongoose.connect(process.env.MONGODB_URI);
 const app = express();
 
 // Views Engine Setup

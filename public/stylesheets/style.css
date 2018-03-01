@@ -188,6 +188,10 @@ hr {
   padding-bottom: 40px;
 }
 
+.contact-text h2, .contact-text p, .contact-text label{
+  color: white;
+}
+
 /* Contact Styling Ends Here */
 
 /* Signup & Login Page Styling begins here */
