@@ -85,7 +85,7 @@ app.use(passport.session());
 // Check to See if User is Signed In After Passport // 
 app.use ((req, res, next)=>{
   if(req.user){
-    res.locals.user = req.user; // !!!!!!
+    res.locals.user = req.user; // 
   }
   next();
 });
