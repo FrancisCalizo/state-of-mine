@@ -42,7 +42,7 @@
                   <strong>City:</strong>  <%= review.city %><br> 
                   <strong>State:</strong> <%= review.state %><br>
                   <!-- <strong>Image:</strong> <img src="<%= review.picturePath %>" style="width:200px"><br> -->
-                  <strong>Comments:</strong> <%= review.comments %><br>
+                  <!-- <strong>Comments:</strong> <%= review.comments %><br> -->
                   <strong>Rating:</strong> <%= review.rating %><br>
                   <div class="review-btns">
                     <form action="/<%= review._id %>/edit-review" method="GET">
@@ -72,12 +72,16 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">Let's take a closer look:</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
           <% reviews.forEach((review) => { %>
-            <img src="<%= review.picturePath %>" style="width:200px; >
+            <span class="review-img"><img src="<%= review.picturePath %>";></span>
+            <div class="review-comments">
+              <h4>Comments</h4>
+              <p><%= review.comments %></p>
+            </div>
+            <div class="clear-float"></div>
             <% }) %>
         </div>
         <div class="modal-footer">

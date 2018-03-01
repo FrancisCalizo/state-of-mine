@@ -355,6 +355,23 @@ hr {
   font-weight: bold;
 }
 
+.clear-float{
+  clear: both;
+}
+
+.review-comments, .modal-header h4{
+  text-align: center;
+}
+
+/* Modal Styling Begins Here */
+
+.review-img img{
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+  float: left;
+}
+
 /* Add & Edit Reviews Styling goes Here */
 .new-page, .edit-page{
   background-image: url('../images/blue-mountains.jpg');

@@ -19,9 +19,9 @@ const MongoStore      = require('connect-mongo')(session);  // Store Sessions in
 const User            = require('./models/user');
 
 // Local Database 
-// mongoose.connect('mongodb://localhost/stateofmine');
+mongoose.connect('mongodb://localhost/stateofmine');
 // Heroku Database
-mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
