@@ -9,3 +9,8 @@ State of Mine is travel-log based application in which the user is able to creat
 
 <h1 align="center">Technologies</h1>
 <p>Node.js, Express.js, MongoDB, Mongoose, Passport, Bcrypt, Heroku, JavaScript, Bootstrap, HTML, CSS</p>
+
+<h1> Missing</h1>
+<ul>
+  <li> Make US map update automatically when user puts name of that State in a review.
+</ul>
