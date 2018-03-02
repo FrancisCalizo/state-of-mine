@@ -1,6 +1,6 @@
 <h1 align="center"> State of Mine </h1>
 <p align="center">
-<strong>Demo the App here: https://franciscalizo.github.io/dodge-game-clone/</strong>
+<strong>Demo the App here: https://state-of-mine-.herokuapp.com/</strong>
 
 Module 2 CRUD Application for Ironhack's 9 week coding bootcamp, created in 7 days.
 
