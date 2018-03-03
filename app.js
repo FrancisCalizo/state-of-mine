@@ -20,6 +20,7 @@ const User            = require('./models/user');
 
 // Local Database 
 // mongoose.connect('mongodb://localhost/stateofmine');
+
 // Heroku Database
 mongoose.connect(process.env.MONGODB_URI);
 

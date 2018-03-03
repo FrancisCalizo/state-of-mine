@@ -146,6 +146,12 @@ a {
   }
 }
 
+@media(max-width: 1200px){
+  .about{
+    height: 750px;
+  }
+}
+
 .about-text {
   padding: 50px 0;
 }
