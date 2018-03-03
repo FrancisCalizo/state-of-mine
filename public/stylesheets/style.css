@@ -142,13 +142,7 @@ a {
 
 @media(max-width:992px) {
   .about{
-    height: 650px;
-  }
-}
-
-@media(max-width: 1200px){
-  .about{
-    height: 750px;
+    height: 1100px;
   }
 }
 
@@ -157,7 +151,7 @@ a {
 }
 
 .about h2{
-  font-size: 6vw;
+  font-size: 5em;
   color: #1EA4BD;
   font-family: 'Lobster', cursive;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -173,13 +167,13 @@ hr {
 
 .about h4{
   font-family: 'Lobster', cursive;
-  font-size: 2vw;
+  font-size: 2em;
   padding: 15px 0;
   font-weight: bold;
 }
 
 .about p{
-  font-size: 2vw;
+  font-size: 2em;
 }
 
 /* About Styling Ends Here */
